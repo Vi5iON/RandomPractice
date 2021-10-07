@@ -1,3 +1,5 @@
+# To find salary of employee
+
 print('Welcome to salaray calculator.\n')
 
 salary = float(input('Enter the salary of employee.\n'))
@@ -5,6 +7,8 @@ num_working_days = int(input('Enter the number of working days.\n'))
 days_worked = int(input('Enter the number of days employee worked for.\n'))
 
 salary_for_day = float(salary / 30)
+
+# checking for overtime and loss of pay
 
 if days_worked > num_working_days : 
     salary_gain = salary_for_day * (days_worked - num_working_days)
