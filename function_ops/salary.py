@@ -1,3 +1,6 @@
+# main() is userdefined function.
+# __main__ is the entry point of a python code, it's the 1st thing that the python code starts executing when started.
+
 def main() :
     salary = float(input('Enter base pay.\n'))
     num_working_days = int(input('Enter the number of working days.\n'))
