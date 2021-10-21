@@ -2,17 +2,16 @@
 main block that uses is_amstrong() to check if its amstrong number
 '''
 def main() :
-    num = int(input('Enter the range.\n'))
-    flg = True
-
-    for i in range(1, num+1) :
+    num = int(input('Enter the number of amstrong numbers needed.\n'))
+    print(f'\nFinding {num} amstrong number(s):')
+    count = 0
+    i = 1
+    while count < num :
         if is_amstrong(i) :
             print(i)
-            flg = False
-
-    if flg :
-        print('No results where found.')
-
+            count = add(count, 1)
+        i = add(i, 1)
+    print('Done.')
 
 # is_amstrong() returns if true or false based on calculate result from calculate()
 def is_amstrong(num: int)->bool :
@@ -42,10 +41,6 @@ def num_of_digits(num: int)->int :
     return count
 
 
-def add(num1:int, num2:int)->int :
-    return num1 + num2
-
-
 # retrives last digit from number
 def digit_retriver(num: int)->int:
     return num % 10
@@ -54,6 +49,11 @@ def digit_retriver(num: int)->int:
 # truncate number by removing units place in the number
 def num_truncate(num: int)->int :
     return num // 10
+
+
+#simple function to add two numbers
+def add(num1:int, num2:int)->int :
+    return num1 + num2
 
 
 if __name__ == '__main__' :
