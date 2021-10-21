@@ -54,7 +54,7 @@ def num_truncate(num:int)->int :
     return num // 10
 
 
-#simple function to add to number
+#simple function to add to number to avoid repition
 def add(num1:int, num2:int)->int :
     return num1 + num2
 
