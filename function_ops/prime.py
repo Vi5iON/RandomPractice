@@ -17,7 +17,6 @@ def is_prime(num:int)->bool :
 #count_of_factors(num) checks for number for factors running a loop from 2 to root of the number.
 
 def count_of_factors(num:int)->int :
-    print('cof')
     for i in range(2, sqrt(num)+1) :
         print(f'{i=}')
         if num % i == 0:

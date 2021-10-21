@@ -1,5 +1,6 @@
 import random
 
+#entry point of the application.
 def main() :
     print('!!!!!!!!!!!!!! Rock, Paper or Scissor !!!!!!!!!!!!!!\n')
     user_choice = user_turn()
@@ -7,10 +8,12 @@ def main() :
     result(user_choice, computer_choice)
 
 
+#user's turn to pick
 def user_turn()->str :
     return read('Choose between Rock, Paper or Scissor.\n')
 
 
+#computer's turn to pick
 def comp_turn()->str :
     print('Computer is choosing.')
     chose = random.choice(('rock', 'paper', 'scissor'))
@@ -18,6 +21,7 @@ def comp_turn()->str :
     return chose
 
 
+#compute result using if statments
 def result(user:str, comp:str) :
     if user.lower() == 'rock' and comp == 'paper':
         print('Rock covered by paper. Computer wins!!')
@@ -34,6 +38,7 @@ def result(user:str, comp:str) :
     else :
         print('Both chose same. Draw!!!')
 
+#to read input user
 def read(msg: str)->str :
     return input(msg+'\n')
 

@@ -92,6 +92,7 @@ def read(msg: str)->str:
     return input(msg)
 
 
+#keep the game running in a loop
 if __name__ == '__main__' :
     print('!!Welcome!!')
     game()

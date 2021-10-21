@@ -8,8 +8,7 @@ def fact(num) :
 
     if num :
         return num * fact(num-1)
-    else :
-        return 1
+    return 1
 
 
 if __name__ == '__main__' :

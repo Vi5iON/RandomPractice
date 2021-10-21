@@ -1,5 +1,5 @@
 ''' 
-main block that uses is_strong() to check if its strong number
+main block that uses find_strong to check find strong number(s)
 '''
 def main() :
     num = int(input('Enter the number of strong numbers needed.\n'))
@@ -11,6 +11,7 @@ def main() :
     print('Found availabe strong numbers.')
     
 
+# to print specified number of strong numbers
 def find_strong(num: int):
     count = 0
     i = 1
@@ -54,7 +55,7 @@ def num_truncate(num:int)->int :
     return num // 10
 
 
-#simple function to add to number to avoid repition
+#simple function to add to number
 def add(num1:int, num2:int)->int :
     return num1 + num2
 

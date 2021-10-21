@@ -1,9 +1,17 @@
 ''' 
-main block that uses is_amstrong() to find amstrong number
+main block that uses is_amstrong() to find amstrong number using recurrsion
+MAX limit is 13 counts. Beyond that stack-overflow error.
 '''
 def main() :
     num = int(input('Enter the number of amstrong numbers needed.\n'))
     print(f'\nFinding {num} amstrong number(s):')
+    count = 0
+    i = 1
+    amstrong_recurrsion(count, num, i)
+
+
+'''recurrsive function that call itself to avoid using loop
+    
     count = 0
     i = 1
     while count < num :
@@ -11,7 +19,16 @@ def main() :
             print(i)
             count = add(count, 1)
         i = add(i, 1)
-    print('Done.')
+
+'''
+def amstrong_recurrsion(count:int, num:int, i:int) :
+    if count < num :
+        if is_amstrong(i) :
+            print(i)
+            count = add(count, 1)
+        amstrong_recurrsion(count, num, add(i, 1))
+    return
+
 
 # is_amstrong() returns if true or false based on calculate result from calculate()
 def is_amstrong(num: int)->bool :
