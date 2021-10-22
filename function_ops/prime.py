@@ -18,7 +18,6 @@ def is_prime(num:int)->bool :
 
 def count_of_factors(num:int)->int :
     for i in range(2, sqrt(num)+1) :
-        print(f'{i=}')
         if num % i == 0:
             return 1
     return 0
