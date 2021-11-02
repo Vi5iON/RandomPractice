@@ -13,6 +13,7 @@ def main():
 def create_png(img: bytes):    
     handle = open('D:\PythonCodes\\file_handling\\image_work\\one_piece_copy_PNG.png', 'wb')
     handle.write(img)
+    handle.flush()
     handle.close()
     print('png file created.\n')
 
@@ -20,6 +21,7 @@ def create_png(img: bytes):
 def create_jpeg(img: bytes):
     handle = open('D:\PythonCodes\\file_handling\\image_work\\one_piece_copy_JPEG.jpeg', 'wb')
     handle.write(img)
+    handle.flush()
     handle.close()
     print('jpeg file created.\n')
 
